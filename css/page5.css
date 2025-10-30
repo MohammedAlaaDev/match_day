@@ -1,0 +1,185 @@
+/* 
+Topics:
+
+1- x mark
+    2- search
+    3- List 
+
+*/
+
+
+/* 1- x mark styling is in global.css file */
+
+
+/* 2- search (Start) */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 428px;
+}
+
+#search {
+    width: 88.8%;
+    height: 56px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+/* 2- search (End) */
+
+/* 3- List (Start) */
+
+ul.teams li.team {
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul.teams li.team:first-child::before {
+    width: 0;
+}
+
+ul.teams li.team:last-child::after {
+    width: 0;
+}
+
+ul.teams li.team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+ul.teams li.team::before,
+ul.teams li.team::after {
+    width: 88.8%;
+    height: 0.5px;
+    background-color: var(--grey-medium);
+    position: absolute;
+    content: "";
+    left: 50%;
+    translate: -50% 0;
+    z-index: 0;
+}
+
+ul.teams li.team::before {
+    top: 0;
+}
+
+ul.teams li.team::after {
+    bottom: 0;
+}
+
+ul.teams li.team .text {
+    gap: 8px;
+}
+
+ul.teams li.team .text img {
+    width: 24px;
+    height: 24px;
+}
+
+ul.teams li.team .text p.team-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--grey);
+}
+
+ul.teams li.team .check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--grey);
+    fill: var(--grey);
+}
+
+/* Active State for selection (Start) */
+.active-team {
+    background-color: #E8E8E8;
+    z-index: 1;
+}
+
+ul.teams .active-team+li.team::before {
+    width: 0%;
+}
+
+
+.active-team::before,
+.active-team::after {
+    width: 0% !important;
+}
+
+.active-team p.team-title {
+    color: var(--main-blue) !important;
+}
+
+ul.teams li.team.active-team .check {
+    border-color: var(--green);
+    fill: var(--green);
+}
+
+/* Active State for selection (End) */
+
+footer.footer-page5 {
+    background-color: var(--grey-medium);
+    margin-top: 16px;
+}
+
+footer.footer-page5 .footer-btn {
+    background-color: white;
+    color: var(--grey-medium);
+    font-weight: 700;
+    line-height: 100%;
+}
+
+footer.footer-page5 .footer-btn .arrow-right {
+    fill: var(--grey-medium);
+}
+
+/* Active State for footer (Start) */
+
+footer.footer-page5.active-footer {
+    background-color: var(--green);
+    margin-top: 16px;
+}
+
+footer.footer-page5.active-footer .footer-btn {
+    background-color: white;
+    color: var(--green);
+    font-weight: 700;
+    line-height: 100%;
+}
+
+footer.footer-page5.active-footer .footer-btn .arrow-right {
+    fill: var(--green);
+}
+
+/* Active State for footer (End) */
+
+
+/* media query */
+
+@media(max-width:376px) {
+    footer.footer-page5 .footer-btn {
+        font-size: 14px;
+        width: 98%;
+    }
+}
+
+@media(min-width:768px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+/* 3- List (End) */

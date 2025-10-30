@@ -1,0 +1,134 @@
+/* 
+Main Topics :
+
+1- x-mark styling
+2- Header styling
+3- Form
+4- Footer
+
+*/
+
+
+/* 1- x-mark styling is in global.css, because it's a reusable element */
+
+
+/* 2- Header styling (Start) */
+
+.container {
+    max-width: 428px;
+    padding-top: 88px;
+}
+
+header.header-page1 {
+    min-height: 154px;
+    max-width: 380px;
+}
+
+/* Header media query  */
+
+@media(min-width: 600px) {
+    header.header-page1 {
+        margin-inline: auto;
+    }
+}
+
+@media(min-width: 1000px) {
+    header.header-page1 {
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+}
+
+header.header-page1 h1.main-title,
+header.header-page1 p.sub-title,
+header.header-page1 p.instructions {
+    font-weight: 700;
+    line-height: 22px;
+    font-size: 18px;
+}
+
+header.header-page1 h1.main-title {
+    color: var(--main-blue);
+}
+
+header.header-page1 p.sub-title {
+    margin: 22px 0;
+}
+
+header.header-page1 p.instructions .instructions-text {
+    margin-left: 5px;
+}
+
+/* 2- Header styling (End) */
+
+
+/* 3- Form (Start) */
+form {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 24px;
+
+    margin-top: 40px;
+}
+
+/*
+    the input elements styling is in 'global.css' file 
+*/
+
+form .input-container textarea {
+    border: none;
+    outline: none;
+    box-shadow: var(--shadow);
+    font-size: 16px;
+}
+
+form .input-container textarea::placeholder {
+    color: var(--grey-medium);
+}
+
+form .input-container textarea {
+    max-width: 337px;
+    height: 180px;
+    border-radius: 8px;
+    padding: 15.5px 25px;
+    resize: none;
+}
+
+/* media query of Form */
+@media(min-width: 600px) {
+    form .input-container textarea {
+        max-width: 100%;
+    }
+}
+
+/* 3- Form (End) */
+
+
+/* 4- Footer (Start) */
+
+footer {
+    background-color: var(--green);
+}
+
+footer.footer-page1 {
+    margin-top: 64px;
+}
+
+footer.footer-page1 .footer-btn {
+    background-color: white;
+    color: var(--green);
+    font-weight: 600;
+    line-height: 100%;
+}
+
+footer.footer-page1 .footer-btn .arrow-right {
+    fill: var(--green);
+}
+
+/* 4- Footer (End) */

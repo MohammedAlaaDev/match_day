@@ -1,0 +1,508 @@
+/* 
+
+note: this file is for
+
+- reused code or syles
+- global variables
+
+- if there were multiple pages that uses the same element...
+its style will be written here, to avoid repeating the style in every css
+
+
+Main Topics :
+
+1*- variables & Reset Page Defaults 
+2*- body, font,  & html tag styling 
+3*- Left and Right Gaps -Container-
+4*- Classes to prevent repeating code
+
+=====
+5*- reused elements in different pages
+(if you want to change the element in only specific page,
+just add a class to it then go to the page css file & style it from there)
+
+reused elements topics:
+
+1^- Inputs
+2^- Corners
+3^- logo image styling
+4^- Emojies
+5^- Answers of Questions
+6^- Header
+7^- Footer
+8^- x mark
+9^- Check icon
+
+=====
+
+*/
+
+
+/* 1*- variables, fonts & Reset Page Defaults (Start) */
+
+/* Host Grotesk */
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/host-grotesk/HostGrotesk-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/host-grotesk/HostGrotesk-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/host-grotesk/HostGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/host-grotesk/HostGrotesk-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/host-grotesk/HostGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/host-grotesk/HostGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Agharti */
+
+@font-face {
+    font-family: 'Agharti';
+    src: url('../assets/fonts/agharti/Agharti-RegularSemiCondensed.ttf') format('truetype');
+    font-weight: 50;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agharti';
+    src: url('../assets/fonts/agharti/Agharti-BoldSemiCondensed.ttf') format('truetype');
+    font-weight: 82;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agharti';
+    src: url('../assets/fonts/agharti/Agharti-BlackSemiCondensed.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Host Grotesk", sans-serif;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-blue: #051C74;
+    --secondary-blue: #2662E4;
+    --green: #489F38;
+    --orange: #FF6533;
+    --yellow: #FFC500;
+    --yellow-light: #fefcea;
+    --grey: #878787;
+    --grey-medium: #C3C3C3;
+    --grey-light: #F9F9F9;
+    --dark-grey: #373737;
+    --shadow: 5px 4px 20px 0px #00000021;
+}
+
+/* 1*- variables, fonts & Reset Page Defaults (End) */
+
+
+/* 2*- body & html tag styling (Start) */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--grey-light);
+    min-height: 100vh;
+}
+
+/* 2*- body & html tag styling (End) */
+
+
+/* 3*- Left and Right Gaps -Container- (Start) */
+.container {
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* 3*- Left and Right Gaps -Container- (End) */
+
+
+/* 4*- Classes to prevent repeating code (Start) */
+.center-flex {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 4*- Classes to prevent repeating code (End) */
+
+
+/* 5*- reused elements (Start) */
+/* 1^- Inputs (Start) */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-container label {
+    color: var(--main-blue);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    box-shadow: var(--shadow);
+    font-size: 16px;
+    max-width: 333px;
+    height: 56px;
+    border-radius: 30px;
+    padding: 0 22px;
+}
+
+.input-container input::placeholder {
+    color: var(--grey-medium);
+}
+
+/* media query of Inputs (Start) */
+@media(min-width: 600px) {
+
+    .input-container input {
+        max-width: 100%;
+    }
+}
+
+/* media query of Inputs (End) */
+/* 1^- Inputs (End) */
+
+
+/* 2^- Corners (Start) */
+.top-corners,
+.bottom-corners {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.corner {
+    width: 50px;
+    height: 50px;
+    border-left: 12.5px solid;
+    border-top: 12.5px solid;
+    position: absolute;
+}
+
+.top-left {
+    border-color: var(--secondary-blue);
+}
+
+.top-right {
+    right: 0;
+    rotate: 90deg;
+    color: var(--green);
+}
+
+.bottom-right,
+.bottom-left {
+    bottom: 0;
+}
+
+.bottom-right {
+    right: 0;
+    rotate: 180deg;
+    border-color: var(--orange);
+}
+
+.bottom-left {
+    rotate: 270deg;
+    border-color: var(--yellow);
+}
+
+
+/* 2^- Corners (End) */
+
+/* 3^- logo image styling (Start) */
+.logo-circle {
+    width: 40px;
+    height: 40px;
+}
+
+/* 3^- logo image styling (End) */
+
+/* 4^- Emojies (Start) */
+.emoji {
+    width: 20px;
+    height: 20px;
+}
+
+/* 4^- Emojies (End) */
+
+/* 5^- Answers of Questions (Start) */
+.questions-answers .q-and-a .reply-answer {
+    color: var(--main-blue);
+    font-weight: 500;
+    line-height: 100%;
+    box-shadow: var(--shadow);
+    font-size: 16px;
+    max-width: 333px;
+    height: 56px;
+    border-radius: 30px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+}
+
+@media(min-width: 600px) {
+    .questions-answers .q-and-a .reply-answer {
+        max-width: 100%;
+    }
+}
+
+/* 5^- Answers of Questions (End) */
+
+
+/* 6^- Header (Start) */
+
+.container {
+    max-width: 410px;
+    padding-top: 88px;
+}
+
+header.page-header {
+    max-width: 380px;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Media query */
+@media(min-width: 768px) {
+    header.page-header {
+        max-width: none;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+}
+
+header.page-header .main {
+    width: 203px;
+    gap: 10px;
+}
+
+header.page-header .main img.website-logo {
+    width: 54px;
+    height: 46px;
+}
+
+header.page-header .main h1.website-title {
+    color: var(--main-blue);
+    font-size: 28px;
+}
+
+header.page-header .main h1.website-title span {
+    color: var(--green);
+    position: relative;
+}
+
+header.page-header .main h1.website-title span::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 3.5px;
+    background-color: var(--green);
+    bottom: 0;
+    left: 50%;
+    translate: calc(-50% - 1px) -8.8px;
+    transform: skewX(25deg);
+}
+
+header.page-header .main .header-text {
+    flex-direction: column;
+}
+
+header.page-header .main .header-text .website-subtitle {
+    font-size: 9px;
+    translate: 0px -6px;
+    color: var(--main-blue);
+    position: relative;
+}
+
+header.page-header .main .header-text .website-subtitle::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 1px;
+    background-color: var(--main-blue);
+    left: 50%;
+    bottom: 0;
+    translate: calc(-50% - 1px) -2.8px;
+}
+
+header.page-header .smiling-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* 6^- Header (End) */
+
+/* 7^- Footer (Start) */
+footer {
+    height: 88px;
+}
+
+footer .footer-btn {
+    display: block;
+    width: 365px;
+    height: 56px;
+    border-radius: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* media query of footer */
+@media(max-width:375px) {
+    footer .footer-btn {
+        width: 300px;
+    }
+}
+
+footer .footer-btn .arrow-right {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 52px;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+/* 7^- Footer (End) */
+
+/* 8^- x mark (Start) */
+.x-mark {
+    width: 33.33px;
+    height: 33.33px;
+
+    border: 2px solid var(--grey);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 28px;
+    right: 44px;
+}
+
+.cross {
+    fill: var(--grey);
+    width: 25px;
+    height: 18px;
+}
+
+/* 8^- x mark (End) */
+
+/* 9^- check icon (Start) */
+.check {
+    width: 22px;
+    height: 22px;
+    background-color: var(--grey-light);
+    fill: var(--grey-medium);
+    display: block;
+    border: 1px solid var(--grey-medium);
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-card .check {
+    background-color: var(--green);
+    fill: var(--grey-light);
+}
+
+
+/* 9^- check icon (End) */
+
+/* 5*- reused elements (End) */

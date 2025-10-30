@@ -1,0 +1,249 @@
+/* 
+
+    content:
+
+    1- Header
+    3- Heading text & Photo
+    3- Premium
+
+
+*/
+
+/* 1- Header Styles are in global.css file,
+because this is a reusable element*/
+
+
+/* 2- Heading text & Photo (Start) */
+section.section-page3 {
+    margin: 40px 0 16px;
+    padding: 24px 44px 44px;
+    background-color: white;
+    height: 653px;
+}
+
+/* media query */
+@media(max-width:460px) {
+    section.section-page3 {
+        padding: 10px;
+    }
+}
+
+.heading-page3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--main-blue);
+}
+
+.emoji {
+    width: 16px;
+    height: 16px;
+}
+
+section .photo {
+    width: 292px;
+    height: 519px;
+    margin: 24px auto 60px;
+    position: relative;
+}
+
+/* media query */
+@media(max-width:450px) {
+    section .photo {
+        width: 232px;
+        height: 459px;
+        overflow: hidden;
+    }
+}
+
+section .photo img.player {
+    width: 100%;
+    height: 100%;
+}
+
+section .photo .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0;
+}
+
+section .photo .logo-grey1,
+section .photo .logo-grey2,
+section .photo .logo-grey3,
+section .photo .logo-grey4,
+section .photo .logo-grey5 {
+    position: absolute;
+    opacity: 0.6;
+}
+
+section .photo .logo-grey1,
+section .photo .logo-grey2,
+section .photo .logo-grey3 {
+    width: 90px;
+    height: 76.8px;
+}
+
+section .photo .logo-grey4,
+section .photo .logo-grey5 {
+    width: 55.11px;
+    height: 47px;
+}
+
+section .photo .logo-grey1 {
+    top: 36px;
+    left: 31px;
+}
+
+section .photo .logo-grey2 {
+    top: 174.5px;
+    left: 101px;
+}
+
+section .photo .logo-grey3 {
+    top: 316.8px;
+    left: 171.8px;
+}
+
+section .photo .logo-grey4 {
+    top: 50.8px;
+    left: 180.8px;
+}
+
+section .photo .logo-grey5 {
+    top: 308.5px;
+    left: 46px;
+}
+
+.photo .match-info {
+    width: 220px;
+    height: 62px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    clip-path: path(" M 0,0 L 205,0 A 13,13 0,0,1 220,16 L 193,50 A 13,13 0,0,1 180,55 L 0,40 Z")
+}
+
+.photo .teams-imgs {
+    position: absolute;
+    bottom: -7px;
+    left: 21px;
+    translate: 0 -50%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 37px;
+    height: 74px;
+    border-radius: 7px;
+    padding: 2.5px;
+    z-index: 1;
+    gap: 2px;
+}
+
+.photo .teams-imgs .team1,
+.photo .teams-imgs .team2 {
+    width: 100%;
+    height: 50%;
+}
+
+.photo .match-info .text {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 5px 55px 0 0;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.photo .match-info .text p.main {
+    font-family: 'Agharti';
+    font-weight: 50;
+}
+
+.photo .match-info .text p.secondary {
+    font-family: 'Agharti';
+}
+
+.photo .match-info .text p.secondary span {
+    font-family: 'Agharti';
+    margin-inline: 3px;
+    font-weight: 50;
+}
+
+/* 2- Heading text & Photo (End) */
+
+/* 3- Premium (Start) */
+.premium {
+    min-width: 380px;
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow-light);
+    padding: 24px 58px;
+    margin: 0px auto 82px;
+}
+
+
+.premium .premium-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.premium p.offer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+
+
+.premium p.offer span {
+    font-weight: bold;
+}
+
+.premium .btns {
+    gap: 16px;
+}
+
+.premium .btns .buy,
+.premium .btns .stay-free {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 64px;
+    padding: 8px 16px;
+}
+
+.premium .btns .buy {
+    color: white;
+    background-color: var(--green);
+}
+
+.premium .btns .stay-free {
+    border: 1px solid var(--dark-grey);
+    color: var(--dark-grey);
+}
+
+/* media query */
+@media(max-width:450px) {
+    .premium {
+        min-width: auto;
+        max-width: 300px;
+        padding: 10px 20px;
+    }
+
+    .premium p.offer,
+    .premium .btns .buy {
+        font-size: 12px;
+    }
+}
+
+
+/* 3- Premium (End) */
